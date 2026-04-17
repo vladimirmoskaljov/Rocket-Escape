@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rocket Escape</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- START SCREEN -->
+<section id="startScreen" class="screen active">
+  <div class="background-layer start-bg"></div>
+  <div class="screen-overlay"></div>
+
+  <div class="screen-content">
+    <h1 class="game-title">Rocket Escape</h1>
+    <button id="startBtn" class="main-btn">START</button>
+  </div>
+</section>
+
+<!-- INSIDE ROCKET (10 sec) -->
+<section id="insideScreen" class="screen">
+  <div class="background-layer inside-bg"></div>
+  <div class="screen-overlay"></div>
+
+  <div class="screen-content">
+    <h2>Entering the rocket...</h2>
+    <div id="insideCountdown" class="countdown">10</div>
+  </div>
+</section>
+
+<!-- GAME SCREEN -->
+<section id="gameScreen" class="screen">
+  <div class="background-layer computer-bg"></div>
+  <div class="screen-overlay"></div>
+
+  <div class="game-ui">
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+      <div id="hearts">❤️❤️❤️❤️❤️</div>
+      <div id="timer">30:00</div>
+    </div>
+
+    <!-- LEVELS -->
+    <div class="levels-panel">
+
+      <div class="level-row">
+        <div>Lvl 1 Code:</div>
+        <input id="lvl1" maxlength="4">
+        <div id="c1" class="status-circle"></div>
+      </div>
+
+      <div class="level-row">
+        <div>Lvl 2 Code:</div>
+        <input id="lvl2" maxlength="4">
+        <div id="c2" class="status-circle"></div>
+      </div>
+
+      <div class="level-row">
+        <div>Lvl 3 Code:</div>
+        <input id="lvl3" maxlength="4">
+        <div id="c3" class="status-circle"></div>
+      </div>
+
+      <div class="level-row">
+        <div>Lvl 4 Code:</div>
+        <input id="lvl4" maxlength="4">
+        <div id="c4" class="status-circle"></div>
+      </div>
+
+    </div>
+
+    <!-- FINAL BUTTON -->
+    <button id="finalBtn" class="main-btn" disabled>START</button>
+
+  </div>
+</section>
+
+<!-- GAME OVER -->
+<section id="gameOverScreen" class="screen">
+  <div class="background-layer gameover-bg"></div>
+  <div class="screen-overlay"></div>
+
+  <div class="screen-content">
+    <h1>GAME OVER</h1>
+  </div>
+</section>
+
+<!-- WIN -->
+<section id="winScreen" class="screen">
+  <div class="background-layer win-bg"></div>
+  <div class="screen-overlay"></div>
+
+  <div class="screen-content">
+    <h1>Thank you, you saved my life!</h1>
+  </div>
+</section>
+
+<!-- AUDIO -->
+<audio id="bgMusic" src="sounds/music.mp3" loop></audio>
+<audio id="errorSound" src="sounds/error.mp3"></audio>
+<audio id="successSound" src="sounds/success.mp3"></audio>
+<audio id="winSound" src="sounds/win.mp3"></audio>
+<audio id="boomSound" src="sounds/boom.mp3"></audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
